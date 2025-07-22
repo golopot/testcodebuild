@@ -14,6 +14,8 @@ jobs:
       - codebuild-testcodebuild1-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
     - name: check nodejs
-      run: node -v
+      run: |
+        cat /etc/os-release
+        node -v
     - name: Checkout
       uses: actions/checkout@v4

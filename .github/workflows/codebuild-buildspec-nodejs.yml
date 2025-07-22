@@ -1,4 +1,4 @@
-name: codebuild-yum-install-nodejs
+name: codebuild-buildspec-nodejs
 
 on:
   push:

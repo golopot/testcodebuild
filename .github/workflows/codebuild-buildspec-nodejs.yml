@@ -12,6 +12,7 @@ jobs:
     name: Hello build
     runs-on: 
       - codebuild-testcodebuild2buildspec-${{ github.run_id }}-${{ github.run_attempt }}
+        buildspec-override:true
     steps:
     - name: check nodejs
       run: |

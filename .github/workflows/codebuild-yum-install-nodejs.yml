@@ -15,9 +15,11 @@ jobs:
     steps:
     - name: yum install nodejs (Deployment Preparation)
       run: |
-        yum install npm -y;
+        yum install npm -y
         yum install git -y   
     - name: check nodejs
-      run: node -v
+      run: |
+        cat /etc/os-release
+        node -v
     - name: Checkout
       uses: actions/checkout@v4

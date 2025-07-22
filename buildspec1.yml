@@ -4,5 +4,6 @@ phases:
   install:
     runtime-versions:
       nodejs: 20
+  pre_build:
     commands:
-      - echo 11111
+      - echo 123456

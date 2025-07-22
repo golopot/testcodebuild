@@ -4,3 +4,5 @@ phases:
   install:
     runtime-versions:
       nodejs: 20
+    commands:
+      - echo 11111

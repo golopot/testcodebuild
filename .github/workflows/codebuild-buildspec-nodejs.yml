@@ -11,7 +11,7 @@ jobs:
   buildimage:
     name: Hello build
     runs-on: 
-      - codebuild-testcodebuild1-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-testcodebuild2buildspec-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
     - name: check nodejs
       run: |

@@ -1,0 +1,23 @@
+name: codebuild-yum-install-nodejs
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  buildimage:
+    name: Hello build
+    runs-on: 
+      - codebuild-testcodebuild1-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+    - name: yum install nodejs (Deployment Preparation)
+      run: |
+        yum install npm -y;
+        yum install git -y   
+    - name: check nodejs
+      run: node -v
+    - name: Checkout
+      uses: actions/checkout@v4
